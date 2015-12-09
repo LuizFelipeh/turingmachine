@@ -1,0 +1,90 @@
+****************************
+*    Simulador de 2AFD     *
+****************************
+Notação: 
+-> Toda a informação deve estar disposta
+entre os HashTags, um dado por linha.
+-> Se houver (espaço/tabs) nos dados,
+eles serão devidamente tratados.
+-> O primeiro estado informado é o
+inicial.
+*************************
+*       Alfabeto  *
+*************************
+#
+	0
+	1
+	B
+#
+*************************
+*        Estados  *
+*************************
+#
+	q0
+	q1
+	q2
+	q3
+	q4
+	q5
+	q6
+	q7
+	q8
+#
+*************************
+*    Estados Finais *
+*************************
+#
+#
+*************************
+*Função de Transferência*
+*************************
+-> Na Função de Transferência, a tabela
+será organizada por Tabs
+-> Primeiro serão informados os estados 
+finais de cada transição, depois informado
+se a transição é Right ou Left
+**********************************
+	0	1	B
+
+#	q7	q1	-
+	q1	q1	q2
+	q2	q3	-
+	q3	q4	-
+	q5	q0	-
+	q5	q5	q6
+	q6	q6	q4	
+	q7	q7	q8
+	q8	q8	q0
+#	
+**********************************
+	0	1	B
+#
+	R	R	-
+	R	R	L
+	L	L	-
+	L	R	-
+	R	R	-
+	R	R	L
+	L	L	R
+	R	R	L
+	L	L	R
+#
+**********************************
+	0	1	B
+#
+	B	1	-
+	0	1	1
+	0	1	-
+	0	1	-
+	B	1	-
+	0	1	0
+	0	1	0
+	0	1	0
+	0	1	0
+#
+*************************
+*   Cadeia a ser lida   *
+*************************
+#
+	1010
+#
